@@ -7,7 +7,7 @@ AZURE_SOURCE_IMAGE="b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_2_LTS-amd64-s
 AZURE_USER="dtidwell"
 AZURE_PASSWORD="myPassword123"
 AZURE_REGION="East US"
-TCP_ENDPOINTS="80"
+TCP_ENDPOINTS="80,8080"
 CHEF_RECIPE="recipe[testserver]"
 
 knife azure server create --config /etc/chef/knife.rb --azure-dns-name $AZURE_DNS_NAME --azure-vm-name $AZURE_VM_NAME --azure-vm-size $AZURE_VM_SIZE --azure-source-image $AZURE_SOURCE_IMAGE --ssh-user $AZURE_USER --ssh-password $AZURE_PASSWORD --azure-service-location "$AZURE_REGION" --r "$CHEF_RECIPE" --tcp-endpoints $TCP_ENDPOINTS
